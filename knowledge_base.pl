@@ -5,6 +5,7 @@
 :- [nutrition].
 :- [advices].
 :- [diseases].
+:- [zones].
 
 :- dynamic climate/1, altitude/1, altitude_below/1, altitude_above/1, disease_prone_area/1, plant_age/1, growing_season/1, variety_type/1, days_since_flowering/1.
 

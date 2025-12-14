@@ -69,3 +69,43 @@ true.
 false.
 
 ?-
+
+Add zones and altitude
+
+?- assert(zone(intermediate_zone)).
+true.
+
+?- zone_climate(intermediate_zone, C), assert(climate(C)).
+C = hot ;
+C = cool.
+
+?- assert(disease_prone_area(no)).
+true.
+
+?- derive_altitude(700).
+true.
+
+?- recommend_variety_with_confidence(V, C).
+V = yellow_passion_fruit,
+C = 0.7 ;
+false.
+
+?- assert(observed_symptoms([yellow_leaves, wilting_stem])).
+true.
+
+?- diagnose_condition(D, C).
+D = fusarium_wilt,
+C = 0.9 ;
+D = fusarium_wilt,
+C = 0.9 ;
+D = fusarium_wilt,
+C = 0.8 ;
+D = fusarium_wilt,
+C = 0.8 ;
+D = vine_mite,
+C = 0.8 ;
+D = vine_mite,
+C = 0.8 ;
+D = waterlogging,
+C = 0.8 ;
+false.
